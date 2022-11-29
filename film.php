@@ -20,7 +20,6 @@ class Film
 		$this->_realisateur->addFilm($this);
 		$this->_genre->addFilm($this);
 		$this->_casting = [];
-		//$this->_casting-> addFilm($this);
 
 	}
 
@@ -88,7 +87,7 @@ class Film
 	{
 		$result = "";
 		foreach ($this->_casting as $casting) {
-			$result .= $casting->getCasting() . "<br> ";
+			$result .= $casting->getCasting()."  ".$casting->getRole()."<br> ";
 		}
 		return $result;
 	}

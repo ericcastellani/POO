@@ -33,7 +33,6 @@ $genre9 = new Genre("Aventure");
  $film6 = new Film("SLEEPY HOLLOW",1999,106,$genre3,$timburton);
  $film7 = new Film("STAR WARS 4",1977,121,$genre1,$georgelucas);
  $film8 = new Film("AMERICAN GRAFFITI",1973,112,$genre4,$georgelucas);
- $film16 = new Film("STAR WARS 1",1999,133,$genre1,$georgelucas);
  $film9 = new Film("STAR WARS 2",2002,142,$genre1,$georgelucas);
  $film10 = new Film("STAR WARS 3",2005,140,$genre1,$georgelucas);
  $film11 = new Film("INDIANA JONES",1981,115,$genre9,$georgelucas);
@@ -42,7 +41,7 @@ $genre9 = new Genre("Aventure");
  $film14 = new Film("STAR WARS 6",1983,134,$genre1,$georgelucas);
  $film15 = new Film("BATMAN 2",1992,126,$genre3,$timburton);
  $film16 = new Film("STAR WARS 1",1999,136,$genre1,$georgelucas);
- $film17 = new Film("STAR WARS 2",2002,142,$genre1,$georgelucas);
+ 
 
 
 // TEST D'AFFICHAGE
@@ -98,7 +97,7 @@ $harisford= new Acteur("FORD","Harrison","Homme","13-07-1942");
 $markhamill= new Acteur("HAMILL","Mark","Homme","25-09-1951");
 $jacoblloyd= new Acteur("LLOYD","Jacob Christopher","Homme","05-03-1989");
 $haydenchri= new Acteur("CHRISTENSEN","Hayden","Homme","19-04-1981");
-
+$carriefish= new Acteur("FISHER","Carrie","Femme","21-10-1956");
 
 
 $role1=new Role("han solo");
@@ -109,6 +108,7 @@ $role5=new Role("Professeur jones");
 $role6=new Role("Jack Trainer");
 $role7=new Role("Bruce Waynes alias Bat Man");
 $role8=new Role("DARK VADOR alias Anakin Skywalker");
+$role9=new Role("Princess Leia");
 
 $castinghf1= new Casting($film1,$role4,$harisford);
 $castinghf2= new Casting($film7,$role1,$harisford);
@@ -119,7 +119,8 @@ $castingmh2= new Casting($film10,$role2,$markhamill);
 $castingmh3= new Casting($film13,$role2,$markhamill);
 $castingmh4= new Casting($film14,$role2,$markhamill);
 $castingjl1= new Casting($film16,$role8,$jacoblloyd);
-$castinghc1= new Casting($film17,$role8,$haydenchri);
+$castinghc1= new Casting($film16,$role8,$haydenchri);
+$castingcf1= new Casting($film7,$role9,$carriefish);
 
 echo "<h3>$harisford</h3><br>";
 echo $harisford->afficherCasting();
@@ -142,8 +143,8 @@ echo $role8->afficherActeur();
 //affichage casting par film
 
 echo "<h3><i>CASTING DE FILM<br></i></h3>";
-
-echo $film16->afficherCastingFilm();
+echo "<b>$film7</b><br>";
+echo $film7->afficherCastingFilm();
 
 
 

@@ -57,13 +57,7 @@ public function afficherActeur(){
     }
 	return $result;
 }
-/*public function afficherCastingFilm(){
-	$result="";
-	foreach ($this->_film as $film){
-	$result .=$film->getCasting()."<br> ";
-}
-	return $result;
-}*/
+
 
 
 }
