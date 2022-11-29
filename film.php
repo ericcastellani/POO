@@ -6,7 +6,7 @@ Class Film{
     private int $_duree;
     private Genre $_genre;
     private  Realisateur $_realisateur; // à changer class Realisateur ==>private Realisateur $_realisateur
-
+	//private Casting $_casting;
     //constructeur
 
     public function __construct($_titre,$_dateSortie,$_duree,Genre $_genre,Realisateur $_realisateur){// à changer class Realisateur
@@ -17,7 +17,8 @@ Class Film{
         $this-> _realisateur = $_realisateur;
 		$this->_realisateur-> addFilm($this);
 		$this->_genre-> addFilm($this);
-
+		//$this->_casting =[];
+	
     }
     // toString
 
@@ -60,7 +61,13 @@ Class Film{
         $this->_realisateur = $_realisateur;
     }
 
-
+	/*public function afficherCastingFilm(){
+	$result="";
+	foreach ($this->_film as $film){
+	$result .=$film->getCasting()."<br> ";
+}
+	return $result;
+}*/
 
 }
 /* TESTS D'affichage

@@ -3,18 +3,20 @@
 
 Class Casting{
     
-    private string $_film;
-    private string $_role;
+    private Film $_film;
+    private Role $_role;
 	private Acteur $_casting;
 
 
     // constructeur
 
-public function __construct($_film,$_role,Acteur $_casting){
+public function __construct(Film $_film,Role $_role,Acteur $_casting){
     $this->_film = $_film;
     $this->_role = $_role;
 	$this->_casting = $_casting;
 	$this->_casting->addCasting($this);
+	$this->_role->addCasting($this);
+	//$this->_film->addCasting($this);
 
 }
 
@@ -46,7 +48,14 @@ public function setFilm($_film){
 public function setRole($_role){
 	$this->_role = $_role;
 }
-
+//methode afficher casting d'un film
+/*public function afficherCastingFilm(){
+	$result="";
+	foreach ($this->_film as $film){
+	$result .=$film->getCasting()."<br> ";
+}
+	return $result;
+}*/
 	
 }
 
