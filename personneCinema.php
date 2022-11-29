@@ -137,7 +137,7 @@ public function getCasting(){
 	//setters
 
 public function setCasting($_casting){
-    $this-> _casting = $_casting;
+    return $this-> _casting = $_casting;
 }
 
 
@@ -151,7 +151,8 @@ public function addCasting(Casting $casting){//fonction qui permet d'ajouter un 
 public function afficherCasting(){
 	$result = "";
     foreach  ($this->_casting as $casting){
-        $result .=$casting->getFilm()." ** ".$casting->getRole()."--------------";
+	
+        $result .=" Film :".$casting->getFilm()." Role :".$casting->getRole()."<br>";
     }
 	return $result;
 }

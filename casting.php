@@ -27,13 +27,13 @@ public function __toString(){
 	//getters et setters
 	//getters
 public function getCasting(){
-	$this->_casting;
+	return $this->_casting;
 }
 public function getFilm(){
-	$this->_film;
+	return $this->_film;
 }
 public function getRole(){
-	$this->_role;
+	return $this->_role;
 }
 	//setters
 public function setCasting($_casting){
