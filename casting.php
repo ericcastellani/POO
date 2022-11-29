@@ -16,7 +16,7 @@ public function __construct(Film $_film,Role $_role,Acteur $_casting){
 	$this->_casting = $_casting;
 	$this->_casting->addCasting($this);
 	$this->_role->addCasting($this);
-	//$this->_film->addCasting($this);
+	$this->_film->addCasting($this);
 
 }
 
@@ -49,13 +49,13 @@ public function setRole($_role){
 	$this->_role = $_role;
 }
 //methode afficher casting d'un film
-/*public function afficherCastingFilm(){
+public function afficherCastingFilm(){
 	$result="";
 	foreach ($this->_film as $film){
 	$result .=$film->getCasting()."<br> ";
 }
 	return $result;
-}*/
+}
 	
 }
 

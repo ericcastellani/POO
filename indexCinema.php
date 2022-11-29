@@ -143,7 +143,7 @@ echo $role8->afficherActeur();
 
 echo "<h3><i>CASTING DE FILM<br></i></h3>";
 
-//echo $film16->afficherCastingFilm();
+echo $film16->afficherCastingFilm();
 
 
 
