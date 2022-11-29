@@ -83,14 +83,19 @@ echo $genre8->afficherGenre();
 $harisford= new Acteur("FORD","Harrison","Homme","13-07-1942");
 $markhamill= new Acteur("HAMILL","Mark","Homme","25-09-1951");
 
-$casting1= new Casting($film1,"chasseur de répliquants",$harisford);
-$casting2= new Casting("starwars4","han solo",$harisford);
-$casting3= new Casting("indiana jones et l'arche d'alliance","indiana",$harisford);
-$casting4= new Casting("Working girl","Mr",$harisford);
-echo "$harisford<br>";
-echo $harisford->afficherCasting();
+$castinghf1= new Casting($film1,"chasseur de répliquants",$harisford);
+$castinghf2= new Casting("Star Wars 4","han Solo",$harisford);
+$castinghf3= new Casting("Indiana jones et l'arche d'alliance","Indiana",$harisford);
+$castinghf4= new Casting("Working girl","Jack Trainer",$harisford);
+$castingmh1= new Casting("Star Wars 4","Luke Skywalker",$markhamill);
+$castingmh2= new Casting("Star Wars 5","Luke Skywalker",$markhamill);
+$castingmh3= new Casting("Star Wars 6","Luke Skywalker",$markhamill);
 
-echo "$markhamill";
+
+echo "<h3>$harisford</h3><br>";
+echo $harisford->afficherCasting();
+echo"<br>";
+echo "<h3>$markhamill</h3><br>";
 echo $markhamill->afficherCasting();
 
 
@@ -106,32 +111,6 @@ echo $markhamill->afficherCasting();
 
 
 
-/*$harisford= new Acteur("FORD","Harrison","Homme","13-07-1942","test");
-$markhamill= new Acteur("HAMILL","Mark","Homme","25-09-1951","test");
-
-
-
-$casting1= new Casting($harisford,$film1,"chasseur de répliquant");
-$casting2= new Casting($harisford,$film6,"hian solo");
-$casting3= new Casting($harisford,"indiana jones et l'arche d'alliance","indiana");
-$casting4= new Casting($harisford,"pretty woman","Mr ????");
-echo "$harisford<br>";
-
-echo $harisford->afficherCasting();
-echo"------------------------------------------------------------------------------<br>";
-echo"------------------------------------------------------------------------------<br>";
-
-echo "$markhamill<br>";*/
-
-
-
-
-
-
-/*echo "$casting1<br>";
-echo "$casting2<br>";
-echo "$casting3<br>";
-echo "$casting4<br>";*/
 
 
 

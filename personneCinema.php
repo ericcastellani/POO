@@ -152,7 +152,7 @@ public function afficherCasting(){
 	$result = "";
     foreach  ($this->_casting as $casting){
 	
-        $result .=" Film :".$casting->getFilm()." Role :".$casting->getRole()."<br>";
+        $result .="<b> Film :</b>".$casting->getFilm()."<b> Role :</b>".$casting->getRole()."<br>";
     }
 	return $result;
 }
