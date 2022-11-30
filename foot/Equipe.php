@@ -21,7 +21,7 @@ Concevez le projet en POO de façon à :
 
 - lister toutes les équipes d'un joueur
 
-    Ex : Lionel Messi (FC Barcelone 2004, PSG 2021)";
+    Ex : Lionel Messi (FC Barcelone 2004, PSG 2021)<br>";
     
 
 
@@ -37,5 +37,5 @@ class Equipe
 
 
 	}
-    
+
 }
