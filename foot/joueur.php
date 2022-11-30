@@ -1,12 +1,11 @@
 <?php
 
-$now = new DateTime();
 
 class Joueur
 {
 	private string $_nomJoueur;
     private string $_prenomJoueur;
-    private string $_dateNaissance;
+    private DateTime $_dateNaissance;
 	
 	//constructeur
 
@@ -15,13 +14,13 @@ class Joueur
 
 		$this->_nomJoueur = $_nomJoueur;
         $this->_prenomJoueur = $_prenomJoueur;
-        $this->_dateNaissance = $_dateNaissance;
+        $this->_dateNaissance = new DateTime($_dateNaissance);
 
 	}
     //toString()
 
     public function __toString(){
-        return $this->_nomJoueur . "  " . $this->_prenomJoueur . " / " . $this->_dateNaissance ." <br> ";
+        return $this->_nomJoueur . "  " . $this->_prenomJoueur." ";
 	}
 
     //getters 
@@ -54,7 +53,9 @@ class Joueur
     }
 
     public function calculerAge(){
-        
+        $now = new DateTime();
+        $age = $this->_dateNaissance->diff($now);
+        return $age ->format("%Y ans");
 
     }
 
