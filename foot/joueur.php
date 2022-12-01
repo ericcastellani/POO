@@ -6,22 +6,24 @@ class Joueur
 	private string $_nomJoueur;
     private string $_prenomJoueur;
     private DateTime $_dateNaissance;
-	
+	private Nationalite $_nationalite;
 	//constructeur
 
-	public function __construct($_nomJoueur,$_prenomJoueur,$_dateNaissance){
+	public function __construct($_nomJoueur,$_prenomJoueur,$_dateNaissance, Nationalite $_nationalite){
 
 
 		$this->_nomJoueur = $_nomJoueur;
         $this->_prenomJoueur = $_prenomJoueur;
         $this->_dateNaissance = new DateTime($_dateNaissance);
-
+        $this->_nationalite = $_nationalite;
+        $this->_nationalite->addJoueur($this);
 	}
     //toString()
 
     public function __toString(){
-        return $this->_nomJoueur . "  " . $this->_prenomJoueur." ";
-	}
+        
+        return $this->_nomJoueur . "  " .$this->_prenomJoueur." ".$this->calculerAge();
+	}//$this->_prenomJoueur." Nationalité :  ".$this->_nationalite." "
 
     //getters 
 
@@ -30,11 +32,14 @@ class Joueur
     }
 
     public function getPrenomJoueur(){
-        return $this->_prenomJoeur;
+        return $this->_prenomJoueur;
     }
 
     public function getDateNaissance(){
         return $this->_dateNaissance;
+    }
+    public function getNationalite(){
+        return $this->_nationalite;
     }
 
     //setters
@@ -50,6 +55,9 @@ class Joueur
     public function setDateNaissance($_dateNaissance){
         $this->_dateNaissance = $_dateNaissance;
 
+    }
+    public function setNationalite($_nationalite){
+        $this->_nationalite = $_nationalite;
     }
 
     public function calculerAge(){
