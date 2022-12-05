@@ -34,7 +34,10 @@ Class Pays{
     public function setPays($_pays){
         $this->_pays = $_pays;
     }
-
+     // Méthode AddEquipe
+     public function addEquipe(Equipe $_nomEquipe){//fonction qui permet d'ajouter un joueur
+        $this->_nomEquipe[]=$_nomEquipe;
+        }
 
 
 }

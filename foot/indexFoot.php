@@ -13,8 +13,8 @@ require "carriere.php";
 
 //Affichage nationalite
 
-$nationalite1 = new Nationalite("FRANCAISE");
-$nationalite2 = new Nationalite("ESPAGNOLE");
+$nationalite1 = new Nationalite("FRANCAIS");
+$nationalite2 = new Nationalite("ESPAGNOL");
 
 $club1 = new Carriere("FC BARCELONE",2003);
 $club2 = new Carriere("PSG", 2021);
@@ -66,7 +66,8 @@ echo "<b>NATIONALITE  : $nationalite2</b><br>";
 echo "<br>";
 echo $nationalite2->afficherNationalite();
 
-//text affichage carrière
+//test affichage clubs
+
 
 echo"<br>";
 
@@ -75,3 +76,5 @@ echo $club1->afficherCarriere();
 echo"<br>";
 echo "<b>$club2</b><br>";
 echo $club2->afficherCarriere();
+
+//test affichage équipes

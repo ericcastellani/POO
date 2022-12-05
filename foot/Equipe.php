@@ -28,12 +28,17 @@ Concevez le projet en POO de façon à :
 class Equipe
 {
 	private string $_nomEquipe;
-	
+	private Carriere $_nomJoueur;
+	private Pays $_pays;
+
 	//constructeur
 
-	public function __construct($_nomEquipe)
+	public function __construct($_nomEquipe, Pays $_pays,Carriere $nomJoueur)
 	{ // à changer class Realisateur
 		$this->_nomEquipe = $_nomEquipe;
+		$this->_nomJoueur = $_nomJoueur;
+		$this->_nomJoueur->addCarriere($this);
+		
 
 
 	}

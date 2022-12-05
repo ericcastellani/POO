@@ -51,7 +51,7 @@ Class Carriere{
     public function afficherCarriere(){
         $result = "";
         foreach  ($this->_nomJoueur as $nomJoueur){//attention on ne peut utiliser le $this que dans sa propre classe
-            $result .=$nomJoueur." <br>";
+            $result .=$nomJoueur.$nomJoueur->getNationalite()." <br>";
         }
             return $result;
         }
