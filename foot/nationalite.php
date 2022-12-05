@@ -33,7 +33,7 @@ Class Nationalite{
     public function setNationalite($_nationalite){
         $this->_nationalite = $_nationalite;
     }
-    // Méthode AddJoeur
+    // Méthode AddJoueur
     public function addJoueur(Joueur $_nomJoueur){//fonction qui permet d'ajouter un joueur
     $this->_nomJoueur[]=$_nomJoueur;
     }
