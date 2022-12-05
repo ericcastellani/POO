@@ -3,22 +3,22 @@
 //----------------------CLASSE CARRIERE-------------------------------------
 
 Class Carriere{
-    private array $_nomJoueur;// on aurait pu l'appeler $_joueur par exemple
+    private Joueur $_nomJoueur;// on aurait pu l'appeler $_joueur par exemple
     private string $_club;
     private int $_annee;
     
 
     // constructeur
 
-    public function __construct(string $_club,$_annee){
-        $this->_nomJoueur = [];
+    public function __construct(Joueur $_nomJoueur,string $_club,$_annee){
+        $this->_nomJoueur = $_nomJoueur;
         $this->_club = $_club;
         $this->_annee = $_annee;
     }
     //toString()
 
     public function __toString(){
-        return $this->_club." ".$this->_annee." ";
+        return $this->_club." ".$this->_annee." ".$this->_nomJoueur;
     }
     //getters
 
@@ -43,7 +43,7 @@ Class Carriere{
         $this->_annee = $_annee;
     }
 
-    // Méthode AddJoeur
+    // Méthode AddJoueur
     public function addJoueur(Joueur $_nomJoueur){//fonction qui permet d'ajouter un joueur
         $this->_nomJoueur[]=$_nomJoueur;
         }
