@@ -38,9 +38,38 @@ class Equipe
 		$this->_nomEquipe = $_nomEquipe;
 		$this->_nomJoueur = $_nomJoueur;
 		$this->_nomJoueur->addCarriere($this);
-		
-
+		$this->_pays = $_pays;
 
 	}
+
+	//toString()
+
+	public function toString(){
+		$this->_nomEquipe." ".$this->_nomJoueur." ".$this->_pays."<br>";
+	}
+
+	//getters
+
+	public function getNomEquipe(){
+        return $this->_nomEquipe;
+    }
+    public function getNomJoueur(){
+        return $this->_nomJoueur;
+    }
+    public function getAnnee(){
+        return $this->_annee;
+    }
+
+    //setters
+    public function setNomJoueur($_nomJoueur){
+        $this->_nomJoueur = $_nomJoueur;
+    }
+    Public function setNomEquipe($_nomEquipe){
+        $this->_nomEquipe = $_nomEquipe;
+    }
+    public function setAnnee($_annee){
+        $this->_annee = $_annee;
+    }
+
 
 }

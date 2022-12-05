@@ -7,11 +7,11 @@ class Joueur
     private string $_prenomJoueur;
     private DateTime $_dateNaissance;
 	private Nationalite $_nationalite;
-    private Carriere $_club;
-
+    //private Carriere $_club;
+    private $_carriere;
 	//constructeur
 
-	public function __construct($_nomJoueur,$_prenomJoueur,$_dateNaissance, Nationalite $_nationalite,Carriere $_club){
+	public function __construct($_nomJoueur,$_prenomJoueur,$_dateNaissance, Nationalite $_nationalite){//},$_carriere){//Carriere $_club){
 
 
 		$this->_nomJoueur = $_nomJoueur;
@@ -19,9 +19,19 @@ class Joueur
         $this->_dateNaissance = new DateTime($_dateNaissance);
         $this->_nationalite = $_nationalite;
         $this->_nationalite->addJoueur($this);
-        $this->_club = $_club;
-        $this->_club->addJoueur($this);
+        $this->_carriere=[];
+        //$this->_club->addJoueur($this);
 	}
+
+
+    //fonction addCarriere
+    public function addCarriere(Carriere $carriere){ // à changer $carriere n'existe pas
+        $this->_carriere[]=$carriere;
+
+    }
+
+
+
     //toString()
 
     public function __toString(){

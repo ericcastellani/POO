@@ -3,14 +3,15 @@
 //----------------------CLASSE PAYS-------------------------------------
 
 Class Pays{
-    private array $_equipe;
     private string $_pays;
+    private array $_equipe;
 
     // constructeur
 
-    public function __cotruct(string $_pays){
-        $this->_equipe = [];
+    public function __construct(string $_pays){
         $this->_pays = $_pays;
+        $this->_equipe =[];
+        
     }
     //toString()
 
@@ -34,10 +35,10 @@ Class Pays{
     public function setPays($_pays){
         $this->_pays = $_pays;
     }
-     // Méthode AddEquipe
+     /* Méthode AddEquipe
      public function addEquipe(Equipe $_nomEquipe){//fonction qui permet d'ajouter un joueur
         $this->_nomEquipe[]=$_nomEquipe;
-        }
+        }*/
 
 
 }

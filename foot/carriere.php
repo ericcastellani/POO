@@ -3,30 +3,30 @@
 //----------------------CLASSE CARRIERE-------------------------------------
 
 Class Carriere{
-    private array $_nomJoueur;// on aurait pu l'appeler $_joueur par exemple
-    private string $_club;
+    private Joueur $_nomJoueur;// on aurait pu l'appeler $_joueur par exemple
+    private  $_nomEquipe;
     private int $_annee;
     
 
     // constructeur
 
-    public function __construct(string $_club,$_annee){
-        $this->_nomJoueur = [];
-        $this->_club = $_club;
+    public function __construct(Joueur $_nomJoueur, $_nomEquipe,$_annee){
+        $this->_nomJoueur = $_nomJoueur;
+        $this->_nomEquipe = $_nomEquipe;
         $this->_annee = $_annee;
     }
     //toString()
 
     public function __toString(){
-        return $this->_club." ".$this->_annee." ";
+        return $this->_nomJoueur.$this->_nomEquipe." ".$this->_annee." ";
     }
     //getters
 
     public function getNomJoueur(){
         return $this->_nomJoueur;
     }
-    public function getClub(){
-        return $this->_club;
+    public function getNomEquipe(){
+        return $this->_nomEquipe;
     }
     public function getAnnee(){
         return $this->_annee;
@@ -36,8 +36,8 @@ Class Carriere{
     public function setNomJoueur($_nomJoueur){
         $this->_nomJoueur = $_nomJoueur;
     }
-    Public function setClub($_club){
-        $this->_club = $_club;
+    Public function setNomEquipe($_nomEquipe){
+        $this->_nomEquipe = $_nomEquipe;
     }
     public function setAnnee($_annee){
         $this->_annee = $_annee;
@@ -51,7 +51,7 @@ Class Carriere{
     public function afficherCarriere(){
         $result = "";
         foreach  ($this->_nomJoueur as $nomJoueur){//attention on ne peut utiliser le $this que dans sa propre classe
-            $result .=$nomJoueur.$nomJoueur->getNationalite()." <br>";
+            $result .=$nomJoueur->getNomJoueur()." ".$nomJoueur->getNomEquipe()." <br>";
         }
             return $result;
         }
