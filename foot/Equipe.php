@@ -38,7 +38,7 @@ class Equipe
 		$this->_nomEquipe = $_nomEquipe;
 		$this->_carriere = [];
 		$this->_pays = $_pays;
-
+        $this->_pays->addEquipe($this);
 	}
 
 	//toString()
@@ -55,8 +55,8 @@ class Equipe
     public function getCarriere(){
         return $this->_carriere;
     }
-    public function getAnnee(){
-        return $this->_annee;
+    public function getPays(){
+        return $this->_pays;
     }
 
     //setters
@@ -66,20 +66,20 @@ class Equipe
     Public function setCarriere($_carriere){
         $this->_carriere = $_carriere;
     }
-    public function setAnnee($_annee){
-        $this->_annee = $_annee;
+    public function setPays($_pays){
+        $this->_pays = $_pays;
     }
     //fonction addCarriere
-    public function addCarriere(Carriere $carriere){ // à changer $carriere n'existe pas
+    public function addCarriere(Carriere $carriere){
         $this->_carriere[]=$carriere;
 
     }
-    /*public function afficherCarriere(){
+    /*public function afficherEquipe(){
         $result = "";
-        foreach  ($this->_carriere as $carriere){//attention on ne peut utiliser le $this que dans sa propre classe
-            $result .=$carriere->getNomEquipe()." ".$carriere->getAnnee()." <br>";
+        foreach  ($this->_pays as $pays){//attention on ne peut utiliser le $this que dans sa propre classe
+            $result .=$pays->getNomEquipe()." <br>";
         }
             return $result;
         }*/
-
+    
 }

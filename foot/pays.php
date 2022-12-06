@@ -21,6 +21,10 @@ Class Pays{
 
     //getters
 
+    public function addEquipe(Equipe $_equipe){//fonction qui permet d'ajouter une équipe
+
+       $this->_equipe[]=$_equipe;
+       }
     public function getEquipe(){
         return $this->_equipe;
     }
@@ -35,10 +39,15 @@ Class Pays{
     public function setPays($_pays){
         $this->_pays = $_pays;
     }
-     /* Méthode AddEquipe
-     public function addEquipe(Equipe $_nomEquipe){//fonction qui permet d'ajouter un joueur
-        $this->_nomEquipe[]=$_nomEquipe;
-        }*/
+      //Méthode AddEquipe
 
+        ///
+    public function afficherEquipes(){
+        $result="";
+        foreach ($this->_equipe as $equipe){
+            $result .=$equipe->getNomEquipe() . "<br>";
 
+        }
+        return $result;
+    }
 }

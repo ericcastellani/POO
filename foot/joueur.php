@@ -26,8 +26,7 @@ class Joueur
 
 
     //fonction addCarriere
-    public function addCarriere(Carriere $carriere)
-    { // à changer $carriere n'existe pas
+    public function addCarriere(Carriere $carriere){
         $this->_carriere[] = $carriere;
     }
 
@@ -93,7 +92,7 @@ class Joueur
     {
         $result = "";
         foreach ($this->_carriere as $carriere) { //attention on ne peut utiliser le $this que dans sa propre classe
-            $result .= $carriere->getNomEquipe() . " " . $carriere->getAnnee() . " <br>";
+            $result .= $carriere->getEquipe()." ". $carriere->getAnnee() . " <br>";
         }
         return $result;
     }
