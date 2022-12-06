@@ -95,6 +95,7 @@ echo"<br>";
 $equipe1 = new Equipe("PSG",$pays2);
 $equipe2 = new Equipe("FC BARCELONE",$pays1);
 $equipe3 = new Equipe("REAL MADRID",$pays1);
+$equipe4 = new Equipe("OLYMPIQUE DE MARSEILLE",$pays1);
 
 $carriere1= new Carriere($kylianmbappe,$equipe1,2021);
 $carriere2 = new Carriere($kylianmbappe,$equipe2,2021);
@@ -111,7 +112,7 @@ echo "$equipe3<br>";
 //$club2 = new Carriere($kylianmbappe,$equipe2, 2021);
 
 echo "-----------------------------------------<br>";
-echo "<b>$carriere1</b><br>";
+echo "<b>$kylianmbappe</b><br>";
 echo $kylianmbappe->afficherCarriere();
 echo"<br>";
 echo "<b>$carriere3</b><br>";
