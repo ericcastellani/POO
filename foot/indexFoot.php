@@ -101,10 +101,11 @@ $carriere2 = new Carriere($kylianmbappe,$equipe2,2021);
 $carriere3 = new Carriere($kylianmbappe,$equipe3,2018);
 
 
-echo "<b>AFFICHAGE EQUIPE<b><br>";
+echo "<b>AFFICHAGE EQUIPE</b><br>";
 
 echo "$equipe1<br>";
 echo "$equipe2<br>";
+echo "$equipe3<br>";
 
 //$club1 = new Carriere($kylianmbappe,$equipe1,2003);
 //$club2 = new Carriere($kylianmbappe,$equipe2, 2021);
