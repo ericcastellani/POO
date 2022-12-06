@@ -15,6 +15,7 @@ require "carriere.php";
 
 $nationalite1 = new Nationalite("FRANCAIS");
 $nationalite2 = new Nationalite("ESPAGNOL");
+$nationalite3 = new Nationalite("BRESILIEN");
 
 //$club1 = new Carriere($kylianmbappe,"FC BARCELONE",2003);
 //$club2 = new Carriere("PSG", 2021);
@@ -33,6 +34,8 @@ $jordanveretout = new Joueur("VERETOUT","Jordan","1993-03-01",$nationalite1);
 $adrienrabiot = new Joueur("RABIOT","Adrien","1995-04-03",$nationalite1);
 $lucashernandez = new Joueur("HERNANDEZ","Lucas","1996-02-14",$nationalite1);
 $kingsleycoman = new Joueur("COMAN","Kingsley","1996-06-13",$nationalite1);
+$santosneymar = new Joueur("NEYMAR","Santos","1992-02-05",$nationalite3);
+
 //$club1 = new Carriere($kylianmbappe,"FC BARCELONE",2003);
 
 
@@ -107,6 +110,8 @@ $carriere2 = new Carriere($isco,$equipe6,2010);
 $carriere3 = new Carriere($isco,$equipe3,2013);
 $carriere4 = new carriere($kylianmbappe,$equipe5,2015);
 $carriere5 = new Carriere($isco,$equipe7,2022);
+$carriere6 = new Carriere($oliviergiroud,$equipe1,2021);
+$carriere7 = new Carriere($santosneymar,$equipe1,2021);
 
 
 echo "<b>AFFICHAGE EQUIPES</b><br>";
@@ -138,4 +143,8 @@ echo"<b>$pays1</b><br>";
 echo $pays1->afficherEquipes();
 echo "-----------------------------------------<br>";
 echo "<b>AFFICHAGE JOUEURS PAR EQUIPE</b><br>";
+echo"<br>";
+echo "$equipe1<b>";
+echo $equipe1->afficherJoueur();
+echo var_dump($equipe1->afficherJoueur());
 

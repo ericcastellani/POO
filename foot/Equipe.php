@@ -74,12 +74,13 @@ class Equipe
         $this->_carriere[]=$carriere;
 
     }
-    /*public function afficherEquipe(){
+    public function afficherJoueur(){
         $result = "";
-        foreach  ($this->_pays as $pays){//attention on ne peut utiliser le $this que dans sa propre classe
-            $result .=$pays->getNomEquipe()." <br>";
+        foreach  ($this->_carriere as $equipe){//attention on ne peut utiliser le $this que dans sa propre classe
+            $result .=$equipe." <br>";
         }
             return $result;
-        }*/
+        }
+
     
 }

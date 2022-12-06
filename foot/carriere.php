@@ -14,6 +14,7 @@ Class Carriere{
         $this->_nomJoueur = $_nomJoueur;
         $this->_nomJoueur->addCarriere($this);
         $this->_equipe = $_equipe;
+        $this->_equipe->addCarriere($this);
         $this->_annee = $_annee;
     }
     //toString()
@@ -47,8 +48,8 @@ Class Carriere{
      //Méthode addJoueur
     public function addJoueur(Joueur $_nomJoueur){//fonction qui permet d'ajouter un joueur
         $this->_nomJoueur[]=$_nomJoueur;
-        }
-
-
+    }
+    
+    
 
 }
