@@ -4,14 +4,15 @@
 
 Class Carriere{
     private Joueur $_nomJoueur;// on aurait pu l'appeler $_joueur par exemple
-    private  $_nomEquipe;
+    private  Equipe $_nomEquipe;
     private int $_annee;
     
 
     // constructeur
 
-    public function __construct(Joueur $_nomJoueur, $_nomEquipe,$_annee){
+    public function __construct(Joueur $_nomJoueur,Equipe $_nomEquipe,$_annee){
         $this->_nomJoueur = $_nomJoueur;
+        $this->_nomJoueur->addCarriere($this);
         $this->_nomEquipe = $_nomEquipe;
         $this->_annee = $_annee;
     }
@@ -48,12 +49,6 @@ Class Carriere{
         $this->_nomJoueur[]=$_nomJoueur;
         }
 
-    public function afficherCarriere(){
-        $result = "";
-        foreach  ($this->_nomJoueur as $nomJoueur){//attention on ne peut utiliser le $this que dans sa propre classe
-            $result .=$nomJoueur->getNomJoueur()." ".$nomJoueur->getNomEquipe()." <br>";
-        }
-            return $result;
-        }
+
 
 }

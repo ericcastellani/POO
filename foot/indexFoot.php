@@ -33,11 +33,11 @@ $jordanveretout = new Joueur("VERETOUT","Jordan","1993-03-01",$nationalite1);
 $adrienrabiot = new Joueur("RABIOT","Adrien","1995-04-03",$nationalite1);
 $lucashernandez = new Joueur("HERNANDEZ","Lucas","1996-02-14",$nationalite1);
 $kingsleycoman = new Joueur("COMAN","Kingsley","1996-06-13",$nationalite1);
-$club1 = new Carriere($kylianmbappe,"FC BARCELONE",2003);
+//$club1 = new Carriere($kylianmbappe,"FC BARCELONE",2003);
 
 
 
-$club2 = new Carriere($kylianmbappe,"PSG", 2021);
+//$club2 = new Carriere($kylianmbappe,"PSG", 2021);
 //Equipe d'Espagne
 
 $aymericlaporte = new Joueur("LAPORTE","Aymeric","1994-05-27",$nationalite2);
@@ -71,20 +71,47 @@ echo $nationalite2->afficherNationalite();
 //test affichage clubs
 
 
-echo"<br>";
+/*echo"<br>";
 
 echo "<b>$club1</b><br>";
 echo $club1->afficherCarriere();
 echo"<br>";
 echo "<b>$club2</b><br>";
-echo $club2->afficherCarriere();
+echo $club2->afficherCarriere();*/
 
 //test affichage  pays
-
+echo"<br>";
+echo"<b>AFFICHAGE PAYS</b><br>";
+echo"<br>";
  $pays1 = new Pays("ESPAGNE");
  $pays2 = new Pays("FRANCE");
+ echo"<br>";
  echo "$pays1<br>";
  echo "$pays2<br>";
+ echo "<br>";
 
 //test affichage équipe
 
+$equipe1 = new Equipe("PSG",$pays2);
+$equipe2 = new Equipe("FC BARCELONE",$pays1);
+$equipe3 = new Equipe("REAL MADRID",$pays1);
+
+$carriere1= new Carriere($kylianmbappe,$equipe1,2021);
+$carriere2 = new Carriere($kylianmbappe,$equipe2,2021);
+$carriere3 = new Carriere($kylianmbappe,$equipe3,2018);
+
+
+echo "<b>AFFICHAGE EQUIPE<b><br>";
+
+echo "$equipe1<br>";
+echo "$equipe2<br>";
+
+//$club1 = new Carriere($kylianmbappe,$equipe1,2003);
+//$club2 = new Carriere($kylianmbappe,$equipe2, 2021);
+
+echo "-----------------------------------------<br>";
+echo "<b>$carriere1</b><br>";
+echo $kylianmbappe->afficherCarriere();
+echo"<br>";
+echo "<b>$carriere3</b><br>";
+echo $oliviergiroud->afficherCarriere();
