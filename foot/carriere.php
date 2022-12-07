@@ -4,29 +4,31 @@
 
 Class Carriere{
     private Joueur $_nomJoueur;// on aurait pu l'appeler $_joueur par exemple
-    private  $_nomEquipe;
+    private  Equipe $_equipe;
     private int $_annee;
     
 
     // constructeur
 
-    public function __construct(Joueur $_nomJoueur, $_nomEquipe,$_annee){
+    public function __construct(Joueur $_nomJoueur,Equipe $_equipe,$_annee){
         $this->_nomJoueur = $_nomJoueur;
-        $this->_nomEquipe = $_nomEquipe;
+        $this->_nomJoueur->addCarriere($this);
+        $this->_equipe = $_equipe;
+        $this->_equipe->addCarriere($this);
         $this->_annee = $_annee;
     }
     //toString()
 
     public function __toString(){
-        return $this->_nomJoueur.$this->_nomEquipe." ".$this->_annee." ";
+        return $this->_nomJoueur.$this->_equipe." ".$this->_annee." ";
     }
     //getters
 
     public function getNomJoueur(){
         return $this->_nomJoueur;
     }
-    public function getNomEquipe(){
-        return $this->_nomEquipe;
+    public function getequipe(){
+        return $this->_equipe;
     }
     public function getAnnee(){
         return $this->_annee;
@@ -36,8 +38,8 @@ Class Carriere{
     public function setNomJoueur($_nomJoueur){
         $this->_nomJoueur = $_nomJoueur;
     }
-    Public function setNomEquipe($_nomEquipe){
-        $this->_nomEquipe = $_nomEquipe;
+    Public function setequipe($_equipe){
+        $this->_equipe = $_equipe;
     }
     public function setAnnee($_annee){
         $this->_annee = $_annee;
@@ -46,14 +48,8 @@ Class Carriere{
      //Méthode addJoueur
     public function addJoueur(Joueur $_nomJoueur){//fonction qui permet d'ajouter un joueur
         $this->_nomJoueur[]=$_nomJoueur;
-        }
-
-    public function afficherCarriere(){
-        $result = "";
-        foreach  ($this->_nomJoueur as $nomJoueur){//attention on ne peut utiliser le $this que dans sa propre classe
-            $result .=$nomJoueur->getNomJoueur()." ".$nomJoueur->getNomEquipe()." <br>";
-        }
-            return $result;
-        }
+    }
+    
+    
 
 }

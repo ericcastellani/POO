@@ -28,24 +28,23 @@ Concevez le projet en POO de façon à :
 class Equipe
 {
 	private string $_nomEquipe;
-	private Carriere $_nomJoueur;
+	private array $_carriere;
 	private Pays $_pays;
 
 	//constructeur
 
-	public function __construct($_nomEquipe, Pays $_pays,Carriere $nomJoueur)
+	public function __construct($_nomEquipe, Pays $_pays)
 	{ // à changer class Realisateur
 		$this->_nomEquipe = $_nomEquipe;
-		$this->_nomJoueur = $_nomJoueur;
-		$this->_nomJoueur->addCarriere($this);
+		$this->_carriere = [];
 		$this->_pays = $_pays;
-
+        $this->_pays->addEquipe($this);
 	}
 
 	//toString()
 
-	public function toString(){
-		$this->_nomEquipe." ".$this->_nomJoueur." ".$this->_pays."<br>";
+	public function __toString(){
+		return $this->_nomEquipe." ".$this->_pays."<br>";
 	}
 
 	//getters
@@ -53,23 +52,35 @@ class Equipe
 	public function getNomEquipe(){
         return $this->_nomEquipe;
     }
-    public function getNomJoueur(){
-        return $this->_nomJoueur;
+    public function getCarriere(){
+        return $this->_carriere;
     }
-    public function getAnnee(){
-        return $this->_annee;
+    public function getPays(){
+        return $this->_pays;
     }
 
     //setters
-    public function setNomJoueur($_nomJoueur){
-        $this->_nomJoueur = $_nomJoueur;
-    }
-    Public function setNomEquipe($_nomEquipe){
+    public function setNomEquipe($_nomEquipe){
         $this->_nomEquipe = $_nomEquipe;
     }
-    public function setAnnee($_annee){
-        $this->_annee = $_annee;
+    Public function setCarriere($_carriere){
+        $this->_carriere = $_carriere;
     }
+    public function setPays($_pays){
+        $this->_pays = $_pays;
+    }
+    //fonction addCarriere
+    public function addCarriere(Carriere $carriere){
+        $this->_carriere[]=$carriere;
 
+    }
+    public function afficherJoueur(){
+        $result = "";
+        foreach  ($this->_carriere as $equipe){//attention on ne peut utiliser le $this que dans sa propre classe
+            $result .=$equipe." <br>";
+        }
+            return $result;
+        }
 
+    
 }
