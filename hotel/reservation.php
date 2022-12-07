@@ -3,8 +3,8 @@
 class Reservation{
 
 	private array $_hotel;
-    private string $_nomClient;
-    private string $_prenomClient;
+    private string $_nomClient;// à transformer en Client $_client
+    private string $_prenomClient;//à supprimer
 	private Chambre $_chambre;
     
     
@@ -14,8 +14,8 @@ class Reservation{
 
 
 		$this->_hotel = $_hotel;
-        $this->_nomClient = $_nomClient;
-        $this->_prenomClient = $_prenomClient;
+        $this->_nomClient = $_nomClient;// à transformer en $_client
+        $this->_prenomClient = $_prenomClient;//à supprimer
         $this->_chambre = $_chambre;
         $this->_chambre->addChambre($this);
         
@@ -24,7 +24,7 @@ class Reservation{
 
     public function __toString(){
         
-        return $this->_hotel . "  " .$this->_nomClient." ".$this->_prenomClient." ".$this->_chambre;
+        return $this->_hotel . "  " .$this->_nomClient." ".$this->_prenomClient." ".$this->_chambre; //attention a client
     }    
     
     //getters 
