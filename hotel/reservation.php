@@ -3,28 +3,29 @@
 class Reservation{
 
 	private array $_hotel;
-    private string $_nomClient;// à transformer en Client $_client
-    private string $_prenomClient;//à supprimer
+    private Client $_client;// à transformer en Client $_client
 	private Chambre $_chambre;
-    
+    private DateTime $_dateEntree;
+    private DateTime $_dateSortie;
     
 	//constructeur
 
-	public function __construct($_hotel,$_nomClient,$_prenomClient,Chambre $_chambre){
+	public function __construct(Client $_client,Chambre $_chambre,$_dateEntree,$_dateSortie){
 
 
-		$this->_hotel = $_hotel;
-        $this->_nomClient = $_nomClient;// à transformer en $_client
-        $this->_prenomClient = $_prenomClient;//à supprimer
+		$this->_hotel = [];
+        $this->_client = $_client;
         $this->_chambre = $_chambre;
-        $this->_chambre->addChambre($this);
+        //$this->_chambre->addChambre($this);
+        $this->_dateEntree = new DateTime ($_dateEntree); 
+        $this->_dateSortie = new DateTime ($_dateSortie);
         
 	}
     //toString()
 
     public function __toString(){
         
-        return $this->_hotel . "  " .$this->_nomClient." ".$this->_prenomClient." ".$this->_chambre; //attention a client
+        return $this->_dateEntree->format("d-M-Y ")." ".$this->_dateSortie->format("d-M-Y");
     }    
     
     //getters 
@@ -42,6 +43,12 @@ class Reservation{
     }
     public function getChambre(){
         return $this->_chambre;
+    }
+    public function getDateEntree(){
+        return $this->_dateEntree;
+    }
+    public function getDateSortie(){
+        return $this->_dateSortie;
     }
 
     //setters
@@ -62,6 +69,26 @@ class Reservation{
         $this->_chambre = $_chambre;
     
     }
+    public function setDateEntree($_dateEntree){
+        $this->_dateEntree = $_dateEntree;
 
+    }
+    public function setDateSortie($_dateSortie){
+        $this->_dateSortie = $_dateSortie;
+    
+    }
+        // Nombre de nuitées
+
+    public function CalculSejour(){
+        
+        $sejour = $this->_dateSortie->diff($this->_dateEntree);
+        return $sejour->format("%D jours");
+        
+    }
+        // ajouter un hotel
+
+    public function addHotel(Hotel $_nom){
+        $this->_hotel[]=$_nom;
+    }
 
 }
