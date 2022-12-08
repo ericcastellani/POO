@@ -84,6 +84,11 @@ class Reservation{
         return $sejour->d;//renvoit le nombre de nuit ->correspond à $sejour->format("d")
         
     }
+    public function CalculFacture(){
+        $facture = $this->CalculSejour() * $this->getChambre()->getPrix();
+        return $facture;
+
+    }
         // ajouter un hotel
 
     public function addHotel(Hotel $_nom){
