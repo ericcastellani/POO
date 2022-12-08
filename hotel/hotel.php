@@ -5,19 +5,19 @@ class Hotel{
 	private string $_nom;
     private string $_adresse;
     private int $_nbreChambre;
-	private Reservation $_reservation;
+	private array $_reservation;
     
     
 	//constructeur
 
-	public function __construct($_nom,$_adresse,$_nbreChambre,Reservation $_reservation){
+	public function __construct($_nom,$_adresse,$_nbreChambre){
 
 
 		$this->_nom = $_nom;
         $this->_adresse = $_adresse;
         $this->_nbreChambre = $_nbreChambre;
-        $this->_reservation = $_reservation;
-        $this->_reservation->addReservation($this);
+        $this->_reservation = [];
+    
         
 	}
     //toString()

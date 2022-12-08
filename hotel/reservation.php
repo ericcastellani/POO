@@ -2,7 +2,7 @@
 
 class Reservation{
 
-	private array $_hotel;
+	private Hotel $_hotel;
     private Client $_client;
 	private Chambre $_chambre;
     private DateTime $_dateEntree;
@@ -10,10 +10,11 @@ class Reservation{
     
 	//constructeur
 
-	public function __construct(Client $_client,Chambre $_chambre,$_dateEntree,$_dateSortie){
+	public function __construct(Hotel $_hotel,Client $_client,Chambre $_chambre,$_dateEntree,$_dateSortie){
 
 
-		$this->_hotel = [];
+		$this->_hotel = $_hotel;
+        //$this->_hotel->addReservation($this);
         $this->_client = $_client;
         $this->_client->addReservation($this);
         $this->_chambre = $_chambre;
@@ -26,7 +27,7 @@ class Reservation{
 
     public function __toString(){
         
-        return $this->_dateEntree->format("d-m-Y ")." --- ".$this->_dateSortie->format("d-m-Y");
+        return $this->_hotel.$this->_dateEntree->format("d-m-Y ")." --- ".$this->_dateSortie->format("d-m-Y");
     }    
     
     //getters 
@@ -80,7 +81,7 @@ class Reservation{
     public function CalculSejour(){
         
         $sejour = $this->_dateSortie->diff($this->_dateEntree);
-        return $sejour->format("%D jours");
+        return $sejour->d;//renvoit le nombre de nuit ->correspond à $sejour->format("d")
         
     }
         // ajouter un hotel

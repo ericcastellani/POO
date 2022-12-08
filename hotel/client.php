@@ -61,7 +61,7 @@ class Client{
 	public function afficherReservation(){
 		$result="";
 		foreach($this->_reservation as $reservation){
-			$result .=$reservation->getHotel()."  ".$reservation->getChambre()."<br>";
+			$result .=$reservation->getHotel()."  ".$reservation->getChambre(). $reservation->calculSejour(). " nuits<br>";
 			var_dump($this->_reservation);
 		}
 		return $result;
