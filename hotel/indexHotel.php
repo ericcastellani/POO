@@ -31,4 +31,7 @@ $reservation2 = new Reservation($client1,$chambre2,"2021-04-01","2021-04-17");
 
 echo "<h4>RESERVATIONS</h4><br>";
 
-echo $reservation1;
+echo "$reservation1<br>";
+echo "$reservation2<br>";
+
+echo $client1->afficherReservation();

@@ -51,6 +51,26 @@ class Client{
 		$this->_reservation = $_reservation;
 	}
 
+	//ajouter reservation
+
+	public function addReservation(Reservation $reservation){
+		$this->_reservation[]=$reservation;
+	}
+
+	//afficher reservation
+	public function afficherReservation(){
+		$result="";
+		var_dump($this->_reservation);
+		foreach($this->_reservation as $reservation){
+			$result .=$reservation->getClient()."  ".$reservation->getChambre();
+			var_dump($this->_reservation);
+		}
+		return $result;
+		var_dump($this->_reservation);
+
+
+	}
+
 
 
 }

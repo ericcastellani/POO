@@ -3,7 +3,7 @@
 class Reservation{
 
 	private array $_hotel;
-    private Client $_client;// à transformer en Client $_client
+    private Client $_client;
 	private Chambre $_chambre;
     private DateTime $_dateEntree;
     private DateTime $_dateSortie;
@@ -15,6 +15,7 @@ class Reservation{
 
 		$this->_hotel = [];
         $this->_client = $_client;
+        $this->_client->addReservation($this);
         $this->_chambre = $_chambre;
         //$this->_chambre->addChambre($this);
         $this->_dateEntree = new DateTime ($_dateEntree); 
@@ -25,7 +26,7 @@ class Reservation{
 
     public function __toString(){
         
-        return $this->_dateEntree->format("d-M-Y ")." ".$this->_dateSortie->format("d-M-Y");
+        return $this->_dateEntree->format("d-m-Y ")." --- ".$this->_dateSortie->format("d-m-Y");
     }    
     
     //getters 
@@ -34,13 +35,10 @@ class Reservation{
         return $this->_hotel;
     }
 
-    public function getNomClient(){
-        return $this->_nomClient;
+    public function getClient(){
+        return $this->_client;
     }
 
-    public function getPrenomClient(){
-        return $this->_prenomClient;
-    }
     public function getChambre(){
         return $this->_chambre;
     }
@@ -57,7 +55,7 @@ class Reservation{
         $this->_hotel = $_hotel;
     }
 
-    public function setNomClient($_nomClient){
+    public function setClient($_nomClient){
         $this->_nomClient = $_nomClient;
     }
 
@@ -90,5 +88,6 @@ class Reservation{
     public function addHotel(Hotel $_nom){
         $this->_hotel[]=$_nom;
     }
+    
 
 }
