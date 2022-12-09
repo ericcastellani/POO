@@ -75,14 +75,22 @@ class Hotel{
 		foreach($this->_reservation as $reservation){
 			$result .=$reservation->getClient()."  ".$reservation->getChambre()." du ".$reservation->getDateEntree()->format("d-m-y")." au ".$reservation->getDateSortie()->format("d-m-y")."<br>";
 			$compteur ++;
+            
+                
 			//var_dump($this->_reservation)."<br>";
 			//var_dump($total)." <br>";
 
 		}
+        /*if ($compteur = 0 or $compteur =""){
+            $compteur = "Aucune";}
+            else {$compteur = $compteur;}*/
+        
 		return $result.$compteur."<b> RESERVATIONS </b>";// lorsqu'un return il sort de la fonction if faut donc cumuler les variables pour les afficher
-		//return $total;  --> ne fonctionne pas car dès qu'il voit un return il sort de la fonction il faut donc le concatainer avec $result
+		
+        } 
+        //return $total;  --> ne fonctionne pas car dès qu'il voit un return il sort de la fonction il faut donc le concatainer avec $result
 
-	}
+	
     
 
 

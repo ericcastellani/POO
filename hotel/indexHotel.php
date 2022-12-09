@@ -49,6 +49,9 @@ echo "<br>";
 
 
 echo"<h4>Reservation de $hotel1</h4>";
+echo "<b>".$hotel1->getAdresse()."</b><br>";
+echo "<b>Nombre de chambre :</b> ".$hotel1->getNbreChambre()."<br>";
+echo "<br>";
 echo $hotel1->afficherReservationHotel();
 echo "<br>";
 echo "-----------------------------------<br>";
