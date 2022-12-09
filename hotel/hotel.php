@@ -82,9 +82,10 @@ class Hotel{
 
 		}
         var_dump($compteur);
-        if($compteur = 0 or $compteur =""){
+        if($compteur = 0 || $compteur =""){
             $compteur = "Aucune";}
-            else {$compteur = $compteur;}
+        else {$compteur = $compteur;
+        }
 		return $result.$compteur."<b> RESERVATIONS </b>";// lorsqu'un return il sort de la fonction if faut donc cumuler les variables pour les afficher
 		
         } 
