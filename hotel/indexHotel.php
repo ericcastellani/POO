@@ -50,11 +50,17 @@ echo "<br>";
 
 echo"<h4>Reservation de $hotel1</h4>";
 echo "<b>".$hotel1->getAdresse()."</b><br>";
-echo "<b>Nombre de chambre :</b> ".$hotel1->getNbreChambre()."<br>";
+echo "<br>";
+
+echo "<b>Nombre de chambres :</b> ".$hotel1->getNbreChambre()."<br>";
+echo "<b>Nombre de chambres réservées : </b><br>";
+echo "<b>Nombre de chambres dispo : </b>";
+echo $hotel1->getNbreChambre() - $hotel1->getNbreChambre();
 echo "<br>";
 echo $hotel1->afficherReservationHotel();
 echo "<br>";
-echo "-----------------------------------<br>";
+//echo $hotel1->afficherReservationHotel($compteur);
+echo "---------------------------------------------------------------<br>";
 echo"<h4>Reservation de $hotel2</h4>";
 echo $hotel2->afficherReservationHotel();
 
