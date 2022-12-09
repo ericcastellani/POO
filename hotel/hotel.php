@@ -86,15 +86,16 @@ class Hotel{
 
 		return $result.$compteur."<b> RESERVATION(S) </b>";// lorsqu'un return il sort de la fonction if faut donc cumuler les variables pour les afficher
 		
-        } 
+    } 
         //return $total;  --> ne fonctionne pas car dès qu'il voit un return il sort de la fonction il faut donc le concatainer avec $result
     
         /*public function afficherNbreReservation(){
         $compteur = 0;
         foreach($this->_reservation as $reservation){
             $result .=
+
         }*/
-    }
+
 	
     
 
