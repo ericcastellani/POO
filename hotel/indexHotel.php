@@ -58,7 +58,6 @@ echo $hotel1->getNbreChambre() - $hotel1->getNbreChambre();
 echo "<br>";
 echo $hotel1->afficherReservationHotel();
 echo "<br>";
-//echo $hotel1->afficherReservationHotel($this->getNom($compteur));
 echo "---------------------------------------------------------------<br>";
 echo"<h4>Reservation de $hotel2</h4>";
 echo $hotel2->afficherReservationHotel();

@@ -73,12 +73,12 @@ class Hotel{
         $result="";
 		$compteur = 0;
 		foreach($this->_reservation as $reservation){
-			$result .=$reservation->getClient()."  ".$reservation->getChambre()." du ".$reservation->getDateEntree()->format("d-m-y")." au ".$reservation->getDateSortie()->format("d-m-y")."<br>";
+			$result .=$reservation->getClient()."  ".$reservation->getChambre()." du ".$reservation->getDateEntree()->format("d-m-Y")." au ".$reservation->getDateSortie()->format("d-m-Y")."<br>";
 			$compteur ++;   
 			//var_dump($this->_reservation)."<br>";
 		}
         //var_dump($compteur);
-        if($compteur == 0 || $compteur ==""){// ne pas omettre ==
+        if($compteur == 0 || $compteur ==""){// ne pas omettre == et non =
             $compteur = "Aucune";
         } else{$compteur==$compteur;}
         
