@@ -39,7 +39,14 @@ echo "$reservation1<br>";
 echo "$reservation2<br>";
 echo "$reservation3<br>";
 
+echo"___________________________________________________________________________<br>";
+
 echo"<h4>Reservation de $client1</h4>";
 echo $client1->afficherReservation();
 echo"<h4>Reservation de $client2</h4>";
 echo $client2->afficherReservation();
+echo "<br>";
+echo"<h4>Reservation de $hotel1</h4>";
+
+echo $hotel1->afficherReservationHotel();
+

@@ -65,14 +65,12 @@ class Client{
 			$result .=$reservation->getHotel()."  ".$reservation->getChambre(). $reservation->calculSejour(). " nuits ".$reservation->CalculFacture(). "€<br>";
 			$total +=$reservation->CalculFacture();
 			//var_dump($this->_reservation)."<br>";
-			var_dump($total)." <br>";
+			//var_dump($total)." <br>";
 
 		}
 		return $result.$total." €";// lorsqu'un return il sort de la fonction if faut donc cumuler les variables pour les afficher
-		//return $total;  --> ne fonctionne pas car dès qu'il voir un return il sort de la fonction
-		var_dump($total);
+		//return $total;  --> ne fonctionne pas car dès qu'il voit un return il sort de la fonction il faut donc le concatainer avec $result
 
-		
 	}
 
 

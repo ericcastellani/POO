@@ -14,7 +14,7 @@ class Reservation{
 
 
 		$this->_hotel = $_hotel;
-        //$this->_hotel->addReservation($this);
+        $this->_hotel->addReservation($this);
         $this->_client = $_client;
         $this->_client->addReservation($this);
         $this->_chambre = $_chambre;

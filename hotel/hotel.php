@@ -17,7 +17,7 @@ class Hotel{
         $this->_adresse = $_adresse;
         $this->_nbreChambre = $_nbreChambre;
         $this->_reservation = [];
-    
+        //$this->_reservation->addReservation($this);
         
 	}
     //toString()
@@ -58,10 +58,32 @@ class Hotel{
         $this->_nbreChambre = $_nbreChambre;
 
     }
-    public function setNationalite($_reservation){
+    public function setReservation($_reservation){
         $this->_reservation = $_reservation;
     
     }
+    //ajouter réservation
+
+	public function addReservation(Reservation $reservation){
+		$this->_reservation[]=$reservation;
+	}
+    //afficher réservation
+
+    public function afficherReservationHotel(){
+        $result="";
+		$compteur = 0;
+		foreach($this->_reservation as $reservation){
+			$result .=$reservation->getClient()."  ".$reservation->getChambre()." du ".$reservation->getDateEntree()->format("d-m-y")." au ".$reservation->getDateSortie()->format("d- m- y")."<br>";
+			$compteur ++;
+			//var_dump($this->_reservation)."<br>";
+			//var_dump($total)." <br>";
+
+		}
+		return $result.$compteur."<b> RESERVATIONS </b>";// lorsqu'un return il sort de la fonction if faut donc cumuler les variables pour les afficher
+		//return $total;  --> ne fonctionne pas car dès qu'il voit un return il sort de la fonction il faut donc le concatainer avec $result
+
+	}
+    
 
 
 }
