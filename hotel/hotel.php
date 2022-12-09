@@ -24,7 +24,7 @@ class Hotel{
 
     public function __toString(){
         
-        return $this->_nom . "  " .$this->_adresse." ".$this->_nbreChambre;
+        return $this->_nom . "  " .$this->_adresse." ";//.$this->_nbreChambre;
     }    
     
     //getters 

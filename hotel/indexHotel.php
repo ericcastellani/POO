@@ -26,7 +26,8 @@ echo "$client2<br>";
 
 echo"--------------------------------------------------------------------------<br>";
 
-$hotel1 = new Hotel("HILTON **** Strasbourg","10 route de la Gare 67000 STRASBOURG",30,);
+$hotel1 = new Hotel("HILTON **** Strasbourg","10 route de la Gare 67000 STRASBOURG",30);
+$hotel2 = new Hotel("HOTEL REGENT **** Paris","Paris",30);
 
 $reservation1 = new Reservation($hotel1,$client1,$chambre1,"2021-03-11","2021-03-15");
 $reservation2 = new Reservation($hotel1,$client1,$chambre2,"2021-04-01","2021-04-17");
@@ -36,6 +37,7 @@ echo "<h4>RESERVATIONS</h4><br>";
 
 echo "$reservation1<br>";
 echo "$reservation2<br>";
+echo "$reservation3<br>";
 
 echo"<h4>Reservation de $client1</h4>";
 echo $client1->afficherReservation();

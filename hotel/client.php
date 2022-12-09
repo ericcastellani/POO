@@ -63,13 +63,13 @@ class Client{
 		$total = 0;
 		foreach($this->_reservation as $reservation){
 			$result .=$reservation->getHotel()."  ".$reservation->getChambre(). $reservation->calculSejour(). " nuits ".$reservation->CalculFacture(). "€<br>";
-			//$total +=$reservation->CalculFacture();
+			$total +=$reservation->CalculFacture();
 
-			var_dump($this->_reservation);
+			//var_dump($this->_reservation);
 		}
 		return $result;
 		return $total;
-		var_dump($this->_reservation);
+		//var_dump($this->_reservation);
 
 	}
 
