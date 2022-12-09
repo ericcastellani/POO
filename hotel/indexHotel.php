@@ -46,7 +46,12 @@ echo $client1->afficherReservation();
 echo"<h4>Reservation de $client2</h4>";
 echo $client2->afficherReservation();
 echo "<br>";
-echo"<h4>Reservation de $hotel1</h4>";
 
+
+echo"<h4>Reservation de $hotel1</h4>";
 echo $hotel1->afficherReservationHotel();
+echo "<br>";
+echo "-----------------------------------<br>";
+echo"<h4>Reservation de $hotel2</h4>";
+echo $hotel2->afficherReservationHotel();
 

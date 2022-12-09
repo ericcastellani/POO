@@ -73,7 +73,7 @@ class Hotel{
         $result="";
 		$compteur = 0;
 		foreach($this->_reservation as $reservation){
-			$result .=$reservation->getClient()."  ".$reservation->getChambre()." du ".$reservation->getDateEntree()->format("d-m-y")." au ".$reservation->getDateSortie()->format("d- m- y")."<br>";
+			$result .=$reservation->getClient()."  ".$reservation->getChambre()." du ".$reservation->getDateEntree()->format("d-m-y")." au ".$reservation->getDateSortie()->format("d-m-y")."<br>";
 			$compteur ++;
 			//var_dump($this->_reservation)."<br>";
 			//var_dump($total)." <br>";
