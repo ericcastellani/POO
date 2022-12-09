@@ -68,8 +68,8 @@ class Client{
 			var_dump($total)." <br>";
 
 		}
-		return $result;
-		return $total;
+		return $result.$total." €";// lorsqu'un return il sort de la fonction if faut donc cumuler les variables pour les afficher
+		//return $total;  --> ne fonctionne pas car dès qu'il voir un return il sort de la fonction
 		var_dump($total);
 
 		
