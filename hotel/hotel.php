@@ -81,14 +81,14 @@ class Hotel{
 			//var_dump($total)." <br>";
 
 		}
-        var_dump($compteur);
-        if($compteur = 0 || $compteur =""){
-            $compteur = "Aucune";}
-        }
-        $result.=$compteur;
+        //var_dump($compteur);
+        if($compteur == 0 || $compteur ==""){// ne pas omettre ==
+            $compteur = "Aucune";
+        } else{$compteur==$compteur;}
+        //$result=$result.$compteur;//.$compteur;
         
 
-		return $result;//."<b> RESERVATIONS </b>";// lorsqu'un return il sort de la fonction if faut donc cumuler les variables pour les afficher
+		return $result.$compteur."<b> RESERVATION(S) </b>";// lorsqu'un return il sort de la fonction if faut donc cumuler les variables pour les afficher
 		
         } 
         //return $total;  --> ne fonctionne pas car dès qu'il voit un return il sort de la fonction il faut donc le concatainer avec $result
