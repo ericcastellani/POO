@@ -32,6 +32,7 @@ $hotel2 = new Hotel("HOTEL REGENT **** Paris","Paris",30);
 $reservation1 = new Reservation($hotel1,$client1,$chambre1,"2021-03-11","2021-03-15");
 $reservation2 = new Reservation($hotel1,$client1,$chambre2,"2021-04-01","2021-04-17");
 $reservation3 = new Reservation($hotel1,$client2,$chambre3,"2021-01-01","2021-01-02");
+$resevation4 = new Reservation($hotel2,$client1,$chambre1,"2021-03-11","2021-03-15");
 echo "<h4>RESERVATIONS</h4><br>";
 
 echo "$reservation1<br>";
