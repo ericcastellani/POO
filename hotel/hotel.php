@@ -7,7 +7,7 @@ class Hotel
 	private string $_adresse;
 	private int $_nbreChambre;
 	private array $_reservation;
-	//private string $_compteur;
+	
 
 
 	//constructeur
@@ -20,8 +20,7 @@ class Hotel
 		$this->_adresse = $_adresse;
 		$this->_nbreChambre = $_nbreChambre;
 		$this->_reservation = [];
-		//$this->_reservation->addReservation($this);
-		//$this->_compteur = 0;
+		
 
 	}
 	//toString()
@@ -107,7 +106,7 @@ class Hotel
 		return $result . $compteur . "<b> RESERVATION(S) </b>"; // lorsqu'un return il sort de la fonction if faut donc cumuler les variables pour les afficher
 
 	}
-	//return $total;  --> ne fonctionne pas car dès qu'il voit un return il sort de la fonction il faut donc le concatainer avec $result
+	//return $compteur;  --> ne fonctionne pas car dès qu'il voit un return il sort de la fonction il faut donc le concatainer avec $result
 
 	public function afficherInformationHotel()
 	{
