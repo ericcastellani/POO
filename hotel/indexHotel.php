@@ -75,5 +75,5 @@ echo $hotel3->afficherReservationHotel()."<br>";
 
 echo"_______________________________________________________________________________________________________________<br>";
 echo"<h4>Statuts des chambres de $hotel1</h4>";
-
+echo $hotel1-> afficherStatutChambre();
 

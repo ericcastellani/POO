@@ -84,9 +84,9 @@ class Chambre{
     }*/
     // ajouter un hotel
 
-    public function addHotel(Hotel $_hotel){ // * ajout *
+   /*public function addHotel(Hotel $_hotel){ // * ajout *
         $this->_hotel[]=$_hotel;
-    }
+    }*/
     
 
 
