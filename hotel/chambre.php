@@ -7,7 +7,7 @@ class Chambre{
     private float $_prix;
 	private string $_wifi;
     private bool $_disponibilite;
-    
+    private array $_hotel; // *rajout*
 
 
 	//constructeur
@@ -20,7 +20,7 @@ class Chambre{
         $this->_prix = $_prix;
         $this->_wifi = $_wifi;
         $this->_disponibilite = false;
-        
+        $this->_hotel =[]; // *rajout*
 	}
 
 
@@ -56,6 +56,9 @@ class Chambre{
     
         return $result;
     }
+    public function getHotel(){ // * ajout *
+        return $this->_hotel;
+    }
     
 
     //setters
@@ -76,7 +79,14 @@ class Chambre{
     public function setDisponibilite($_disponibilite){
         $this->_disponibilite = $_disponibilite;
     }
+    public function setHotel($_hotel){ // * ajout *
+        $this->_hotel = $_hotel;
+    }
+    // ajouter un hotel
 
+    public function addHotel(Hotel $_hotel){ // * ajout *
+        $this->_hotel[]=$_hotel;
+    }
     
 
 
