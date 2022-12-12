@@ -7,6 +7,7 @@ class Hotel
 	private string $_adresse;
 	private int $_nbreChambre;
 	private array $_reservation;
+	private array $_statutChambre; // * ajout *
 	
 
 
@@ -20,7 +21,7 @@ class Hotel
 		$this->_adresse = $_adresse;
 		$this->_nbreChambre = $_nbreChambre;
 		$this->_reservation = [];
-		
+		$this->_statutChambre = []; // * ajout *
 
 	}
 	//toString()
@@ -51,10 +52,10 @@ class Hotel
 	{
 		return $this->_reservation;
 	}
-	/*public function getCompteur(){
-		return $this->_compteur;
+	public function getStatuChambre(){ // * ajout *
+		return $this->_statuChambre;
 
-	}*/
+	}
 
 	//setters
 
@@ -76,9 +77,9 @@ class Hotel
 	{
 		$this->_reservation = $_reservation;
 	}
-	/*public function setCompteur($_compteur){
-		$this->_compteur = $_compteur;
-	}*/
+	public function setStatutChambre($_statutChambre){ // * ajout *
+		$this->_statutChambre = $_statutChambre;
+	}
 	//ajouter réservation
 
 	public function addReservation(Reservation $reservation)
@@ -122,5 +123,9 @@ class Hotel
 		echo $this->_nbreChambre - $compteur . "<br>";
 		//RMQ : Lorsque la fonction ne consiste qu'à afficher on n'est pas obligé d'avoir un return
 
+	}
+	// ajouter chambre
+	public function addChambre(Chambre $chambre){ // * ajout *
+		$this->_statutChambre[] = $chambre;
 	}
 }
