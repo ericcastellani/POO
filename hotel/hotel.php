@@ -121,11 +121,7 @@ class Hotel
 		echo "<b>Nombre de chambres réservées : </b>" . $compteur . "<br>";
 		echo "<b>Nombre de chambres dispo : </b>";
 		echo $this->_nbreChambre - $compteur . "<br>";
-		//echo "Nombre de chambres dispo : ".$this->_nbreChambre - $compteur."<br>";
-
-
-
-
+		//RMQ : Lorsque la fonction ne consiste qu'à afficher on n'est pas obligé d'avoir un return
 
 	}
 }
