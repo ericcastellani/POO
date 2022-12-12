@@ -104,6 +104,7 @@ class Hotel{
 		$compteur++;
 
 		}
+	
 		echo "<b>Nombre de chambres : </b>".$this->_nbreChambre."<br>";
 		echo "<b>Nombre de chambres réservées : </b>".$compteur."<br>";
 		echo "<b>Nombre de chambres dispo : </b>";
