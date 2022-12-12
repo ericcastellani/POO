@@ -7,6 +7,7 @@ class Reservation{
 	private Chambre $_chambre;
     private DateTime $_dateEntree;
     private DateTime $_dateSortie;
+	//private int $_compteur;
     
 	//constructeur
 
@@ -21,6 +22,7 @@ class Reservation{
         //$this->_chambre->addChambre($this);
         $this->_dateEntree = new DateTime ($_dateEntree); 
         $this->_dateSortie = new DateTime ($_dateSortie);
+		//$this->_compteur = 0;
         
 	}
     //toString()
@@ -49,6 +51,9 @@ class Reservation{
     public function getDateSortie(){
         return $this->_dateSortie;
     }
+	/*public function getCompteur(){
+		return $this->_compteur;
+	}*/
 
     //setters
 
@@ -76,6 +81,9 @@ class Reservation{
         $this->_dateSortie = $_dateSortie;
     
     }
+	/*public function setCompteur($_compteur){
+		$this-> _compteur = $_compteur;
+	}*/
         // Nombre de nuitées
 
     public function CalculSejour(){

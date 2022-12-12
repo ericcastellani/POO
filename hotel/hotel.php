@@ -6,6 +6,7 @@ class Hotel{
     private string $_adresse;
     private int $_nbreChambre;
 	private array $_reservation;
+	//private string $_compteur;
     
     
 	//constructeur
@@ -18,6 +19,7 @@ class Hotel{
         $this->_nbreChambre = $_nbreChambre;
         $this->_reservation = [];
         //$this->_reservation->addReservation($this);
+		//$this->_compteur = 0;
         
 	}
     //toString()
@@ -43,6 +45,10 @@ class Hotel{
     public function getReservation(){
         return $this->_reservation;
     }
+	/*public function getCompteur(){
+		return $this->_compteur;
+
+	}*/
 
     //setters
 
@@ -62,6 +68,9 @@ class Hotel{
         $this->_reservation = $_reservation;
     
     }
+	/*public function setCompteur($_compteur){
+		$this->_compteur = $_compteur;
+	}*/
     //ajouter réservation
 
 	public function addReservation(Reservation $reservation){
@@ -79,22 +88,33 @@ class Hotel{
 		}
         //var_dump($compteur);
         if($compteur == 0 || $compteur ==""){// ne pas omettre == et non =
-            $compteur = "Aucune";
-        } else{$compteur==$compteur;}
+            $compteur = "Aucune";} 
         
-        
+        //echo "<span id='reserv'>" . $compteur . "</span>";
 
 		return $result.$compteur."<b> RESERVATION(S) </b>";// lorsqu'un return il sort de la fonction if faut donc cumuler les variables pour les afficher
 		
     } 
         //return $total;  --> ne fonctionne pas car dès qu'il voit un return il sort de la fonction il faut donc le concatainer avec $result
     
-        /*public function afficherNbreReservation(){
-        $compteur = 0;
-        foreach($this->_reservation as $reservation){
-            $result .=
+    public function afficherInformationHotel(){
+		
+		$compteur=0;
+		foreach ($this->_reservation as $reservation){
+		$compteur++;
 
-        }*/
+		}
+		echo "<b>Nombre de chambres : </b>".$this->_nbreChambre."<br>";
+		echo "<b>Nombre de chambres réservées : </b>".$compteur."<br>";
+		echo "<b>Nombre de chambres dispo : </b>";
+		echo $this->_nbreChambre - $compteur."<br>";
+		//echo "Nombre de chambres dispo : ".$this->_nbreChambre - $compteur."<br>";
+		$compteur  ="";
+		return  $compteur;
+		
+	
+        
+	}
 
 	
     
