@@ -105,7 +105,7 @@ class Hotel
 
 		//echo "<span id='reserv'>" . $compteur . "</span>";
 
-		return $result . $compteur."reservations" ; // lorsqu'un return il sort de la fonction if faut donc cumuler les variables pour les afficher
+		return $result . "<p style = 'background :green' </p>". $compteur."<p style : 'background: green'  </p>"."RESERVATION(S)" ; // lorsqu'un return il sort de la fonction if faut donc cumuler les variables pour les afficher
 
 	}
 	//return $compteur;  --> ne fonctionne pas car dès qu'il voit un return il sort de la fonction il faut donc le concatainer avec $result
