@@ -80,6 +80,7 @@ class Hotel
 	public function setStatutChambre($_statutChambre){ // * ajout *
 		$this->_statutChambre = $_statutChambre;
 	}
+	//------------------------------------- FONCTIONS RESERVATIONS --------------------------------------------
 	//ajouter réservation
 
 	public function addReservation(Reservation $reservation)
@@ -124,8 +125,12 @@ class Hotel
 		//RMQ : Lorsque la fonction ne consiste qu'à afficher on n'est pas obligé d'avoir un return
 
 	}
+
+	//------------------------------ FONCTIONS STATUT CHAMBRES ---------------------------------------------
+
 	// ajouter chambre
 	public function addChambre(Chambre $chambre){ // * ajout *
 		$this->_statutChambre[] = $chambre;
 	}
+	
 }
