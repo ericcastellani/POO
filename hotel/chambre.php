@@ -80,6 +80,11 @@ class Chambre{
     public function setDisponibilite($_disponibilite){
         $this->_disponibilite = $_disponibilite;
     }
+    public function addReservation()// changement de statut de la chambre si la chambre est réservée
+	{
+		$this->_disponibilite = false;
+	}
+
     /*public function setHotel($_hotel){ // * ajout *
         $this->_hotel = $_hotel;
     }*/
