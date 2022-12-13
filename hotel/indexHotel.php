@@ -54,6 +54,7 @@ $chambre27 = new Chambre(27,2,300,"wifi : oui",$hotel1);
 $chambre28 = new Chambre(28,2,300,"wifi : oui",$hotel1);
 $chambre29 = new Chambre(29,2,300,"wifi : oui",$hotel1);
 $chambre30 = new Chambre(30,2,300,"wifi : oui",$hotel1);
+$chambre31 = new Chambre(1,2,120,"wifi : non",$hotel3);
 
 
 echo "<h4>CHAMBRES :</h4><br>";
@@ -64,7 +65,7 @@ echo "$chambre3<br>";
 $reservation1 = new Reservation($hotel1,$client1,$chambre3,"2021-03-11","2021-03-15");
 $reservation2 = new Reservation($hotel1,$client1,$chambre4,"2021-04-01","2021-04-17");
 $reservation3 = new Reservation($hotel1,$client2,$chambre17,"2021-01-01","2021-01-02");
-$reservation4 = new Reservation($hotel3,$client3,$chambre1,"2021-03-11","2021-03-15");
+$reservation4 = new Reservation($hotel3,$client3,$chambre31,"2021-03-11","2021-03-15");
 echo"--------------------------------------------------------------------------<br>";
 echo "<h4>RESERVATIONS</h4><br>";
 echo "$reservation1<br>";
