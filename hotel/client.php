@@ -61,14 +61,16 @@ class Client{
 	public function afficherReservation(){
 		$result="";
 		$total = 0;
+		$compteur = 0;
 		foreach($this->_reservation as $reservation){
 			$result .=$reservation->getHotel()."  ".$reservation->getChambre(). $reservation->calculSejour(). " nuits ".$reservation->CalculFacture(). "€<br>";
 			$total +=$reservation->CalculFacture();
+			$compteur++;
 			//var_dump($this->_reservation)."<br>";
 			//var_dump($total)." <br>";
 
 		}
-		return $result.$total." €";// lorsqu'un return il sort de la fonction if faut donc cumuler les variables pour les afficher
+		return $result.$total." €<br>"."<span style= 'background: #8ed89d; color : white '> ". $compteur." RESERVATION(S) </span>";//$compteur." RESERVATION(S)";// lorsqu'un return il sort de la fonction if faut donc cumuler les variables pour les afficher
 		//return $total;  --> ne fonctionne pas car dès qu'il voit un return il sort de la fonction il faut donc le concatainer avec $result
 
 	}

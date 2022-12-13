@@ -105,7 +105,7 @@ echo $hotel3->afficherReservationHotel()."<br>";
 
 echo"_______________________________________________________________________________________________________________<br>";
 
-echo $hotel3->afficherStatutChambre();
-echo $hotel1-> afficherStatutChambre();
+echo $hotel1->afficherStatutChambre();
+echo $hotel3-> afficherStatutChambre();
 
 echo "<br>";
