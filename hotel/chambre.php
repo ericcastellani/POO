@@ -53,16 +53,14 @@ class Chambre{
     }
     public function getDisponibilite(){
         if($this->_disponibilite){
-            $result = "disponible";
+            $result = "<span style= 'background: #8ed89d; color : white '> disponible</span>";
         }else 
-        {$result = "réservée";
+        {$result = "<span style= 'background: #d774a9; color : white '> réservée </span>";
         }
     
         return $result;
     }
-    /*public function getHotel(){ // * ajout *
-        return $this->_hotel;
-    }*/
+    
     
 
     //setters
@@ -87,21 +85,9 @@ class Chambre{
 	{
 		$this->_disponibilite = false;
 	}
-    public function wifi(){
-        if ($this->_wifi =="wifi : oui"){
-            $this->_wifi = "📶";}
-            else {$this->_wifi = "";}
-        
-    }
-
-    /*public function setHotel($_hotel){ // * ajout *
-        $this->_hotel = $_hotel;
-    }*/
-    // ajouter un hotel
-
-   /*public function addHotel(Hotel $_hotel){ // * ajout *
-        $this->_hotel[]=$_hotel;
-    }*/
+    
+    //"<span style= 'background: #8ed89d; color : white '> ". $compteur." RESERVATION(S) </span>" ;
+    
     
 
 
