@@ -46,6 +46,9 @@ class Chambre{
     }
 
     public function getWifi(){
+        if ($this->_wifi =="wifi : oui"){
+            $this->_wifi = "📶";}
+            else {$this->_wifi = " --- ";}
         return $this->_wifi;
     }
     public function getDisponibilite(){
@@ -84,6 +87,12 @@ class Chambre{
 	{
 		$this->_disponibilite = false;
 	}
+    public function wifi(){
+        if ($this->_wifi =="wifi : oui"){
+            $this->_wifi = "📶";}
+            else {$this->_wifi = "";}
+        
+    }
 
     /*public function setHotel($_hotel){ // * ajout *
         $this->_hotel = $_hotel;
