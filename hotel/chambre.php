@@ -48,7 +48,7 @@ class Chambre{
     public function getWifi(){
         if ($this->_wifi =="wifi : oui"){
             $this->_wifi = "📶";}
-            else {$this->_wifi = " --- ";}
+            else {$this->_wifi = "  ";}
         return $this->_wifi;
     }
     public function getDisponibilite(){

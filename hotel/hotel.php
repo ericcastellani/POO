@@ -135,7 +135,8 @@ class Hotel
 	// afficher statut chambres
 
 	public function afficherStatutChambre(){ // * ajout *
-		$result="<table border = 1>
+		$result="<h4>Statuts des chambres de $this->_nom</h4>";
+		$result.="<table border = 1>
 			<thead>
 				<tr>
 					<th>Chambre</th>
@@ -143,7 +144,7 @@ class Hotel
 					<th>Wifi</th>
 					<th>Etat</th>
 				</tr>
-			</thead>";
+			</thead><tbody>";
 
 		foreach($this->_statutChambre as $chambre){
 			$result .= 
@@ -156,6 +157,7 @@ class Hotel
 				//"Chambre n° ".$chambre->getNumero()."/  Nombre de lits : ".$chambre->getNbreLit()."/  Prix  : ".$chambre->getPrix() . "€   ".$chambre->getWifi()." Statut : ".$chambre->getDisponibilite()."<br>";
 			
 		}
+		$result.="</tbody></table>";
 		return $result;
 	}
 }
