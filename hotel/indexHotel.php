@@ -55,6 +55,17 @@ $chambre28 = new Chambre(28,2,300,"wifi : oui",$hotel1);
 $chambre29 = new Chambre(29,2,300,"wifi : oui",$hotel1);
 $chambre30 = new Chambre(30,2,300,"wifi : oui",$hotel1);
 $chambre31 = new Chambre(1,2,120,"wifi : non",$hotel3);
+$chambre32 = new Chambre(2,2,200,"wifi : oui",$hotel3);
+$chambre33 = new Chambre(3,3,300,"wifi : oui",$hotel3);
+$chambre34 = new Chambre(4,1,100,"wifi : non",$hotel3);
+$chambre35 = new Chambre(5,2,120,"wifi : non",$hotel3);
+$chambre36 = new Chambre(6,2,120,"wifi : non",$hotel3);
+$chambre37 = new Chambre(7,1,100,"wifi : non",$hotel3);
+$chambre38 = new Chambre(8,2,200,"wifi : oui",$hotel3);
+$chambre39 = new Chambre(9,2,120,"wifi : non",$hotel3);
+$chambre40 = new Chambre(10,3,300,"wifi : oui",$hotel3);
+$chambre41 = new Chambre(1,2,300,"wifi : oui",$hotel2);
+$chambre41 = new Chambre(1,1,120,"wifi : non",$hotel2);
 
 
 echo "<h4>CHAMBRES :</h4><br>";
@@ -107,5 +118,5 @@ echo"___________________________________________________________________________
 
 echo $hotel1->afficherStatutChambre();
 echo $hotel3-> afficherStatutChambre();
-
+echo $hotel2->afficherStatutChambre();
 echo "<br>";
