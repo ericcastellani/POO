@@ -135,9 +135,25 @@ class Hotel
 	// afficher statut chambres
 
 	public function afficherStatutChambre(){ // * ajout *
-		$result="";
+		$result="<table border = 1>
+			<thead>
+				<tr>
+					<th>Chambre</th>
+					<th>Prix</th>
+					<th>Wifi</th>
+					<th>Etat</th>
+				</tr>
+			</thead>";
+
 		foreach($this->_statutChambre as $chambre){
-			$result .= "Chambre n° ".$chambre->getNumero()."/  Nombre de lits : ".$chambre->getNbreLit()."/  Prix  : ".$chambre->getPrix() . "€   ".$chambre->getWifi()." Statut : ".$chambre->getDisponibilite()."<br>";
+			$result .= 
+				"<tr>
+					<td>".$chambre->getNumero()."</td>
+					<td>".$chambre->getPrix()."</td>
+					<td>".$chambre->getWifi()."</td>
+					<td>".$chambre->getDisponibilite()."</td>
+				</tr>";
+				//"Chambre n° ".$chambre->getNumero()."/  Nombre de lits : ".$chambre->getNbreLit()."/  Prix  : ".$chambre->getPrix() . "€   ".$chambre->getWifi()." Statut : ".$chambre->getDisponibilite()."<br>";
 			
 		}
 		return $result;
