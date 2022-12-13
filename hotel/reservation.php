@@ -22,6 +22,7 @@ class Reservation{
         //$this->_chambre->addChambre($this);
         $this->_dateEntree = new DateTime ($_dateEntree); 
         $this->_dateSortie = new DateTime ($_dateSortie);
+        
 	
         
 	}

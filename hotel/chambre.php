@@ -7,12 +7,12 @@ class Chambre{
     private float $_prix;
 	private string $_wifi;
     private bool $_disponibilite;
-    //private array $_hotel; // *rajout*
+    private Hotel $_hotel; // *rajout*
 
 
 	//constructeur
 
-	public function __construct($_numero,$_nbreLit,$_prix,$_wifi){
+	public function __construct($_numero,$_nbreLit,$_prix,$_wifi, Hotel $_hotel){
 
 
 		$this->_numero = $_numero;
@@ -20,7 +20,8 @@ class Chambre{
         $this->_prix = $_prix;
         $this->_wifi = $_wifi;
         $this->_disponibilite = false;
-        //$this->_hotel =[]; // *rajout*
+        $this->_hotel = $_hotel; // *rajout*
+        $this->_hotel->addChambre($this);
 	}
 
 

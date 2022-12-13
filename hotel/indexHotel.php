@@ -5,15 +5,11 @@ require "reservation.php";
 require "chambre.php";
 require "client.php";
 
-$chambre1 = new Chambre(3,2,120.00,"wifi : non");
-$chambre2 = new Chambre(4,2,120,"wifi : non");
-$chambre3 = new Chambre(17,2,300.00,"wifi : oui");
-
 
 echo "<h4>CHAMBRES :</h4><br>";
-echo "$chambre1<br>";
-echo "$chambre2<br>";
-echo "$chambre3<br>";
+// echo "$chambre1<br>";
+// echo "$chambre2<br>";
+// echo "$chambre3<br>";
 
 echo"--------------------------------------------------------------------------<br>";
 
@@ -31,6 +27,10 @@ $hotel1 = new Hotel("HILTON **** Strasbourg","10 route de la Gare 67000 STRASBOU
 $hotel2 = new Hotel("HOTEL REGENT **** Paris","Paris",25);
 $hotel3 = new Hotel("HOTEL TARTAMPION Strasbourg","10 rue Schmilblic 67000 STRASBOURG",10);
 
+
+$chambre1 = new Chambre(3,2,120.00,"wifi : non",$hotel1);
+$chambre2 = new Chambre(4,2,120,"wifi : non",$hotel1);
+$chambre3 = new Chambre(17,2,300.00,"wifi : oui",$hotel1);
 
 
 $reservation1 = new Reservation($hotel1,$client1,$chambre1,"2021-03-11","2021-03-15");
@@ -60,13 +60,13 @@ echo"<h4>Reservation de $hotel1</h4>";
 echo "<br>";
 echo $hotel1->afficherInformationHotel();
 echo"<br>";
-echo "<p style = 'background :green' ".$hotel1->afficherReservationHotel();
+echo $hotel1->afficherReservationHotel();
 echo "<br>";
 echo "---------------------------------------------------------------<br>";
 echo"<h4>Reservation de $hotel2</h4>";
 echo"<br>";
 echo $hotel2->afficherInformationHotel()."<br>";
-echo "<p style : 'background: green'  </p>".$hotel2->afficherReservationHotel()."<br>";
+echo $hotel2->afficherReservationHotel()."<br>";
 echo"-----------------------------------------------------------------<br>";
 echo"<h4>Reservation de $hotel3</h4>";
 echo"<br>";

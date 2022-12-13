@@ -105,7 +105,7 @@ class Hotel
 
 		//echo "<span id='reserv'>" . $compteur . "</span>";
 
-		return $result . $compteur."RESERVATION(S)" ; // lorsqu'un return il sort de la fonction if faut donc cumuler les variables pour les afficher
+		return $result ."<span style= 'background: #8ed89d; color : white '> ". $compteur." RESERVATION(S) </span>" ; // lorsqu'un return il sort de la fonction if faut donc cumuler les variables pour les afficher
 
 	}
 	//return $compteur;  --> ne fonctionne pas car dès qu'il voit un return il sort de la fonction il faut donc le concatainer avec $result
@@ -134,11 +134,10 @@ class Hotel
 	}
 	// afficher statut chambres
 
-	public function afficherStatutChambre(){
+	public function afficherStatutChambre(){ // * ajout *
 		$result="";
 		foreach($this->_statutChambre as $chambre){
-			echo var_dump($this->_StatutChambre);
-			$result .= $chambre->getNumero();
+			$result .= $chambre->getNumero()." ".$chambre->getPrix() . "€  📶";
 			var_dump($chambre);
 		}
 		return $result;
