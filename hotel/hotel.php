@@ -137,7 +137,7 @@ class Hotel
 	public function afficherStatutChambre(){ // * ajout *
 		$result="";
 		foreach($this->_statutChambre as $chambre){
-			$result .= "Chambre n° ".$chambre->getNumero()." Nombre de lits : ".$chambre->getNbreLit()." Prix  : ".$chambre->getPrix() . "€  📶".$chambre->getWifi()."<br>";
+			$result .= "Chambre n° ".$chambre->getNumero()." Nombre de lits : ".$chambre->getNbreLit()." Prix  : ".$chambre->getPrix() . "€  📶".$chambre->getWifi().$chambre->getDisponibilite()."<br>";
 			
 		}
 		return $result;

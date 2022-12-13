@@ -19,7 +19,7 @@ class Chambre{
         $this->_nbreLit = $_nbreLit;
         $this->_prix = $_prix;
         $this->_wifi = $_wifi;
-        $this->_disponibilite = false;
+        $this->_disponibilite = true;
         $this->_hotel = $_hotel; // *rajout*
         $this->_hotel->addChambre($this);
 	}
