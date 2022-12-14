@@ -65,7 +65,8 @@ $chambre38 = new Chambre(8,2,200,"wifi : oui",$hotel3);
 $chambre39 = new Chambre(9,2,120,"wifi : non",$hotel3);
 $chambre40 = new Chambre(10,3,300,"wifi : oui",$hotel3);
 $chambre41 = new Chambre(1,2,300,"wifi : oui",$hotel2);
-$chambre41 = new Chambre(1,1,120,"wifi : non",$hotel2);
+$chambre42 = new Chambre(2,1,120,"wifi : non",$hotel2);
+$chambre43 = new Chambre(3,2,200,"wifi : oui",$hotel2);
 
 
 echo "<h4>CHAMBRES :</h4><br>";
